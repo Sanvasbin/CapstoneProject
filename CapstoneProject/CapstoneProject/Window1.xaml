@@ -1,0 +1,16 @@
+﻿<Window x:Name="winCreateTask" x:Class="CapstoneProject.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CapstoneProject"
+        mc:Ignorable="d"
+        Title="Create Task" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="tbxTaskName" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="288" Margin="115,23,0,0"/>
+        <Label x:Name="lblTaskName" Content="Task Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,27,0,0"/>
+        <Label x:Name="lblStartDateTIme" Content="Start Date Time:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,72,0,0"/>
+        <TextBox x:Name="tbxStartTime" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="288" Margin="115,68,0,0"/>
+
+    </Grid>
+</Window>

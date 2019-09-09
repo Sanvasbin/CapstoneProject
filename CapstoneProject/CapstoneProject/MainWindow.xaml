@@ -1,12 +1,15 @@
-﻿<Window x:Class="CapstoneProject.MainWindow"
+﻿<Window x:Name="frmMain" x:Class="CapstoneProject.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CapstoneProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="PERT Chart" Height="450" Width="800" AutomationProperties.Name="winMain">
     <Grid>
-        
+        <Button x:Name="btnCreateTask" Content="Create Task" HorizontalAlignment="Left" VerticalAlignment="Top" Width="154" Margin="63,158,0,0" Height="86" Click="BtnCreateTask_Click"/>
+        <Button x:Name="btnDisplayProjects" Content="Display Projects" HorizontalAlignment="Left" VerticalAlignment="Top" Width="154" Margin="301,158,0,0" Height="86"/>
+        <Button x:Name="btnDisplayPERTChart" Content="Display PERT Chart" HorizontalAlignment="Left" VerticalAlignment="Top" Width="154" Margin="544,158,0,0" Height="86" Grid.ColumnSpan="2" Click="BtnDisplayPERTChart_Click"/>
+
     </Grid>
 </Window>

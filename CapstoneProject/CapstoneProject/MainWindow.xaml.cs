@@ -24,5 +24,19 @@ namespace CapstoneProject
         {
             InitializeComponent();
         }
+
+        private void BtnCreateTask_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new frmCreateTask();
+            this.Close();
+            window.ShowDialog();
+        }
+
+        private void BtnDisplayPERTChart_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new frmPERTChart();
+            this.Close();
+            window.ShowDialog();
+        }
     }
 }
