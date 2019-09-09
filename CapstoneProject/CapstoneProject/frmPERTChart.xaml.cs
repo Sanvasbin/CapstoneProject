@@ -54,12 +54,9 @@ namespace CapstoneProject
                 {
                     Content = maxDays[i]
                 };
-                Label priority = new Label
-                {
-                    Content = priorityLevel[i]
-                };
+                // make color enum based on priority enum.
+                
             }
         }
-
     }
 }

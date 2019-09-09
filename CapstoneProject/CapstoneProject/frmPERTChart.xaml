@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="PERT Chart" Height="450" Width="800">
     <Grid>
-        
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="33" Click="BtnBack_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="116" Margin="30,116,0,0" TextWrapping="Wrap" Text="Name: and description" VerticalAlignment="Top" Width="305"/>
+        <Label Content="min days" HorizontalAlignment="Left" Margin="29,204,0,0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1"/>
+        <Label Content="guestimated days" HorizontalAlignment="Left" Margin="88,204,0,0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1" RenderTransformOrigin="1.565,0.55"/>
+        <Label Content="max days" HorizontalAlignment="Left" Margin="194,204,0,0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1" RenderTransformOrigin="1.805,0.436" Width="62"/>
+        <Label Content="owner name" HorizontalAlignment="Left" Margin="256,204,0,0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1" RenderTransformOrigin="1.805,0.436" Width="78"/>
+        <TextBox HorizontalAlignment="Left" Height="116" Margin="450,116,0,0" TextWrapping="Wrap" Text="Name: and description" VerticalAlignment="Top" Width="305"/>
+        <Label Content="min days" HorizontalAlignment="Left" Margin="449,204,0,0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1"/>
+        <Label Content="guestimated days" HorizontalAlignment="Left" Margin="508,204,0,0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1" RenderTransformOrigin="1.565,0.55"/>
+        <Label Content="max days" HorizontalAlignment="Left" Margin="614,204,0,0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1" RenderTransformOrigin="1.805,0.436" Width="62"/>
+        <Label Content="owner name" HorizontalAlignment="Left" Margin="676,204,0,0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1" RenderTransformOrigin="1.805,0.436" Width="78"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="1" Margin="335,159,0,0" Stroke="Black" VerticalAlignment="Top" Width="115"/>
+
     </Grid>
 </Window>
