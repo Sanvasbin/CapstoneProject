@@ -54,6 +54,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CalculationService.cs" />
+    <Compile Include="GraphController.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="Task.cs" />
+    <Compile Include="User.cs" />
     <Page Include="frmCreateTask.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
