@@ -93,5 +93,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="database\Dependency.sql" />
+    <Content Include="database\Project.sql" />
+    <Content Include="database\Status.sql" />
+    <Content Include="database\Task.sql" />
+    <Content Include="database\User.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
