@@ -32,7 +32,7 @@ namespace CapstoneProject
                 string taskDescription = tbxTaskDescription.Text;
                 double minDays = double.Parse(tbxMinDuration.Text);
                 double maxDays = double.Parse(tbxMaxDuration.Text);
-                string priorityLevel = tbxPriorityLevel.Text;
+                //string priorityLevel = tbxPriorityLevel.Text;
                 // employee class for owner??
             }
             catch(Exception excep)
@@ -40,13 +40,6 @@ namespace CapstoneProject
                 MessageBox.Show(excep.ToString());
             }
 
-        }
-
-        private void BtnBack_Click(object sender, RoutedEventArgs e)
-        {
-            Window window = new MainWindow();
-            this.Close();
-            window.ShowDialog();
         }
     }
 }

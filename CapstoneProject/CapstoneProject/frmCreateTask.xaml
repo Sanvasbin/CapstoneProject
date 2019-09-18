@@ -7,19 +7,33 @@
         mc:Ignorable="d"
         Title="frmCreateTask" Height="450" Width="800">
     <Grid>
-        <Label x:Name="lblTaskName" Content="Task Name:" HorizontalAlignment="Left" Margin="63,38,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxTaskName" HorizontalAlignment="Left" Height="23" Margin="174,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lblMinDuration" Content="Min Duration:" HorizontalAlignment="Left" Margin="50,176,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxMinDuration" HorizontalAlignment="Left" Height="23" Margin="174,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lblMaxDuration" Content="Max Duration:" HorizontalAlignment="Left" Margin="52,218,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxMaxDuration" HorizontalAlignment="Left" Height="23" Margin="174,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lblTaskDescription" Content="Task Description:" HorizontalAlignment="Left" Margin="36,70,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxTaskDescription" HorizontalAlignment="Left" Height="87" Margin="174,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="291"/>
-        <Label x:Name="lblPriorityLevel" Content="Prioority Level:" HorizontalAlignment="Left" Margin="52,259,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxPriorityLevel" HorizontalAlignment="Left" Height="23" Margin="174,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lblOwner" Content="Owner:" HorizontalAlignment="Left" Margin="85,303,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155" Margin="404,321,0,0" Height="52" Click="BtnSubmit_Click"/>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="33" Click="BtnBack_Click"/>
+        <Label x:Name="lblTaskName" Content="Task Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxTaskName" HorizontalAlignment="Left" Height="23" Margin="113,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblMinDuration" Content="Min Duration:" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxMinDuration" HorizontalAlignment="Left" Height="23" Margin="113,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblMaxDuration" Content="Max Duration:" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxMaxDuration" HorizontalAlignment="Left" Height="23" Margin="113,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblTaskDescription" Content="Task Description:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxTaskDescription" HorizontalAlignment="Left" Height="87" Margin="113,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblPriorityLevel" Content="Priority Level:" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblOwner" Content="Owner:" HorizontalAlignment="Left" Margin="10,212,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="113,270,0,0" Height="22" Click="BtnSubmit_Click"/>
+        <ComboBox HorizontalAlignment="Left" Margin="113,216,0,0" VerticalAlignment="Top" Width="120">
+
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="113,189,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem>1</ComboBoxItem>
+            <ComboBoxItem>2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+            <ComboBoxItem>5</ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="lblOwner_Copy" Content="Status:" HorizontalAlignment="Left" Margin="10,239,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="113,243,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem>Not Started</ComboBoxItem>
+            <ComboBoxItem>In Progress</ComboBoxItem>
+            <ComboBoxItem>Completed</ComboBoxItem>
+        </ComboBox>
 
     </Grid>
 </Window>
