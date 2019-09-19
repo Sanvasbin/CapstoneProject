@@ -8,6 +8,7 @@
         Title="PERT Chart" Height="450" Width="800" AutomationProperties.Name="winMain">
     
     <Grid>
+        <!--Menu and Menu items created by Levi Delezene-->
         <Menu HorizontalAlignment="Stretch" Height="20" VerticalAlignment="Top" Margin="0">
             <MenuItem Header="File" Height="20" Width="auto">
                 <MenuItem x:Name="mi_newProject" Header="New Project" Height="20" HorizontalAlignment="Left" Width="auto"/>
