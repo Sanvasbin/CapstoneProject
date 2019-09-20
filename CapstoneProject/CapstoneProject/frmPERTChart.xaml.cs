@@ -22,6 +22,26 @@ namespace CapstoneProject
         public frmPERTChart()
         {
             InitializeComponent();
+            /// checkin from static point of view
+            User user = new User();
+            user.FirstName = "Sabin";
+            user.LastName = "Shrestha";
+            Task task = new Task();
+            task.Name = "initial";
+            task.Description = "first task";
+            task.StartedDate = DateTime.Now;
+            task.CompletedDate = task.StartedDate.AddDays(5.0);
+            task.MostLikelyDuration = 5;
+            task.Status = Status.inProgress;
+            task.Owner = user;
+
+            string[] taskNames = new string[] { task.Name };
+            string[] taskDescription = new string[] { task.Description };
+            DateTime[] taskStartDate = new DateTime[] { task.StartedDate };
+            DateTime[] taskEndDate = new DateTime[] { task.CompletedDate };
+            string[] priorityLevel = new string[] { task.Priority.ToString() };
+            string[] mostLikely = new string[] { task.MostLikelyDuration.ToString() };
+            DisplayChart(taskNames, taskDescription, taskStartDate, taskEndDate, priorityLevel, mostLikely);
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
@@ -33,29 +53,95 @@ namespace CapstoneProject
 
         // ways to load database and store the whole value in an array for each variable
         // ToDo: make priority level a enum
-        private void DisplayChart(string[] taskNames, string[] taskDescriptions, double[] minDays,
-            double[] maxDays, string[] priorityLevel)
+        private void DisplayChart(string[] taskNames, string[] taskDescriptions, DateTime[] taskStartDate,
+            DateTime[] taskCompleteDate, string[] priorityLevel, string[] mostLikely)
         {
+            Grid grdTasks = new Grid();
+
+            grdTasks.Width = 450;
+            grdTasks.Height = 150;
+            grdTasks.ColumnDefinitions.Add(new ColumnDefinition());
+            grdTasks.ColumnDefinitions.Add(new ColumnDefinition());
+            grdTasks.ColumnDefinitions.Add(new ColumnDefinition());
+
+            grdTasks.RowDefinitions.Add(new RowDefinition());
+            grdTasks.RowDefinitions.Add(new RowDefinition());
+            grdTasks.RowDefinitions.Add(new RowDefinition());
+
             for (int i = 0; i < taskNames.Length; i++)
             {
-                Label Name = new Label
+                TextBox tbxName = new TextBox
                 {
-                    Content = taskNames[i]
+                    Text = taskNames[i],
+                    BorderThickness = new Thickness(5),
+                    IsEnabled = false,
+                    Height = 50,
+                    Width = grdTasks.Width,
+                    TextAlignment = TextAlignment.Center
                 };
-                Label taskDescription = new Label
+
+                TextBox tbxDescription = new TextBox
                 {
-                    Content = taskDescriptions[i]
+                    Text = taskDescriptions[i],
+                    BorderThickness = new Thickness(5.0),
+                    IsEnabled = false,
+                    Height = 50,
+                    Width = grdTasks.Width,
+                    TextAlignment = TextAlignment.Center
                 };
-                Label minimumDays = new Label
+
+                TextBox tbxStartDate = new TextBox
                 {
-                    Content = minDays[i]
+                    Text = taskStartDate[i].ToString(),
+                    BorderThickness = new Thickness(5),
+                    IsEnabled = false,
+                     Height = 50,
+                    Width = 150,
+                    TextAlignment = TextAlignment.Center
                 };
-                Label maximumDays = new Label
+               
+                TextBox tbxCompleteDate = new TextBox
                 {
-                    Content = maxDays[i]
+                    Text = taskCompleteDate[i].ToString(),
+                    BorderThickness = new Thickness(5.0),
+                    IsEnabled = false,
+                    Height = 50,
+                    Width = 150,
+                    TextAlignment = TextAlignment.Center
                 };
+
+                TextBox tbxEstimatedDate = new TextBox
+                {
+                    Text = mostLikely[i].ToString(),
+                    BorderThickness = new Thickness(5.0),
+                    IsEnabled = false,
+                    Height = 50,
+                    Width = 150,
+                    TextAlignment = TextAlignment.Center
+                };
+
+                Grid.SetRow(tbxName, 0);
+                tbxName.SetValue(Grid.ColumnSpanProperty, 3);
+                grdTasks.Children.Add(tbxName);
+
+                tbxDescription.SetValue(Grid.ColumnSpanProperty, 3);
+                Grid.SetRow(tbxDescription, 1);
+                grdTasks.Children.Add(tbxDescription);
+
+                grdTasks.Children.Add(tbxStartDate);
+                Grid.SetRow(tbxStartDate, 2);
+                Grid.SetColumn(tbxStartDate, 0);
+
+                grdTasks.Children.Add(tbxEstimatedDate);
+                Grid.SetRow(tbxEstimatedDate, 2);
+                Grid.SetColumn(tbxEstimatedDate, 1);
+
+                Grid.SetRow(tbxCompleteDate, 2);
+                Grid.SetColumn(tbxCompleteDate, 2);
+                grdTasks.Children.Add(tbxCompleteDate);
+
                 // make color enum based on priority enum.
-                
+                grdMain.Children.Add(grdTasks);
             }
         }
     }

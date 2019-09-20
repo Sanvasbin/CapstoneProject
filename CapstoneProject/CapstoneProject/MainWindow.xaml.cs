@@ -32,5 +32,12 @@ namespace CapstoneProject
         private void mi_exit_Click(object sender, RoutedEventArgs e) {
             Close();
         }
+
+        private void BtnChart_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new frmPERTChart();
+            this.Close();
+            window.ShowDialog();
+        }
     }
 }
