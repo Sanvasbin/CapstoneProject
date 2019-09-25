@@ -31,7 +31,7 @@
             <MenuItem x:Name="mi_help" Header="Help" Height="20" Width="auto"/>
         </Menu>
 
-        <Canvas x:Name="mainCanvas" Margin="10,20,10,10" Width="800" Height="400">
+        <Canvas x:Name="secCanvas" Margin="10,20,10,10" Width="800" Height="400">
             
         </Canvas>
 

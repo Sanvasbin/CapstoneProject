@@ -10,8 +10,8 @@
       Title="Chart">
 
     <Grid>
-        <Canvas Margin="10,20,10,10">
-            <Button x:Name="rectTest" Content="I'm an example task. Right click me"  Height="65" Canvas.Left="259" Canvas.Top="129" Width="227">
+        <Canvas x:Name="mainCanvas" Background="Transparent" Margin="10,20,10,10" Width="780" Height="420">
+            <!--Button x:Name="rectTest" Content="I'm an example task. Right click me"  Height="65" Canvas.Left="259" Canvas.Top="129" Width="227">
                 <Button.ContextMenu>
                     <ContextMenu>
                         <MenuItem x:Name="mi_addTask_rightClick" Header="Add Task" HorizontalAlignment="Left" Height="20" Width="auto" Click="mi_addTask_Click"/>
@@ -19,7 +19,7 @@
                         <MenuItem x:Name="mi_deleteTask_rightClick" Header="Delete Task" HorizontalAlignment="Left" Height="20" Width="auto"/>
                     </ContextMenu>
                 </Button.ContextMenu>
-            </Button>
+            </-->
         </Canvas>
     </Grid>
 </Page>
