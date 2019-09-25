@@ -1,7 +1,9 @@
-﻿using System;
+﻿using CapstoneProject.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,31 +15,41 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CapstoneProject
-{
+namespace CapstoneProject {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
+    public partial class MainWindow : Window {
+        public MainWindow() {
             InitializeComponent();
+            frameMain.Content = new Chart();
         }
 
-        private void mi_addTask_Click(object sender, RoutedEventArgs e) {
-            new frmCreateTask().ShowDialog();
-        }
-
+        //By Levi Delezene
         private void mi_exit_Click(object sender, RoutedEventArgs e) {
             Close();
         }
 
-        private void BtnChart_Click(object sender, RoutedEventArgs e)
+<<<<<<< HEAD        private void BtnChart_Click(object sender, RoutedEventArgs e)
         {
             Window window = new frmPERTChart();
             this.Close();
             window.ShowDialog();
+
+        //By Levi Delezene
+        private void mi_projectProperties_Click(object sender, RoutedEventArgs e) {
+            frameMain.Content = new ProjectProperties();
+        }
+
+        //By Levi Delezene
+        private void mi_openProject_Click(object sender, RoutedEventArgs e) {
+            frameMain.Content = new Chart();
+        }
+
+        //By Levi Delezene
+        public static void numberValidation(object sender, TextCompositionEventArgs e) {
+            //This allows for multiple '.' in the input. Could probably find something nicer
+            e.Handled = new Regex("[^0-9.]+").IsMatch(e.Text);
         }
     }
 }

@@ -6,23 +6,23 @@
         xmlns:local="clr-namespace:CapstoneProject"
         mc:Ignorable="d"
         Title="PERT Chart" Height="450" Width="800" AutomationProperties.Name="winMain">
-    
+
     <Grid>
         <Menu HorizontalAlignment="Stretch" Height="20" VerticalAlignment="Top" Margin="0">
             <MenuItem Header="File" Height="20" Width="auto">
                 <MenuItem x:Name="mi_newProject" Header="New Project" Height="20" HorizontalAlignment="Left" Width="auto"/>
-                <MenuItem x:Name="mi_openProject" Header="Open Project" HorizontalAlignment="Left" Height="20" Width="auto"/>
+                <MenuItem x:Name="mi_openProject" Header="Open Project" HorizontalAlignment="Left" Height="20" Width="auto" Click="mi_openProject_Click"/>
                 <MenuItem x:Name="mi_saveProject" Header="Save Project" HorizontalAlignment="Left" Height="20" Width="auto"/>
                 <Separator/>
-                <MenuItem x:Name="mi_projectProperties" Header="Project Properties" HorizontalAlignment="Left" Height="20" Width="auto"/>
+                <MenuItem x:Name="mi_projectProperties" Header="Project Properties" HorizontalAlignment="Left" Height="20" Width="auto" Click="mi_projectProperties_Click"/>
                 <Separator/>
                 <MenuItem x:Name="mi_exit" Header="Exit" HorizontalAlignment="Left" Height="20" Width="auto" Click="mi_exit_Click"/>
             </MenuItem>
-            <MenuItem Header="Edit" Height="20" Width="auto">
+            <!--<MenuItem Header="Edit" Height="20" Width="auto">
                 <MenuItem x:Name="mi_addTask" Header="Add Task" HorizontalAlignment="Left" Height="20" Width="auto" Click="mi_addTask_Click"/>
                 <MenuItem x:Name="mi_editTask" Header="Edit Task" HorizontalAlignment="Left" Height="20" Width="auto"/>
                 <MenuItem x:Name="mi_deleteTask" Header="Delete Task" HorizontalAlignment="Left" Height="20" Width="auto"/>
-            </MenuItem>
+            </MenuItem>-->
             <MenuItem Header="View" Height="20" Width="auto">
                 <MenuItem x:Name="mi_showMin" Header="Show Min. Estimates" HorizontalAlignment="Left" Height="20" Width="auto"/>
                 <MenuItem x:Name="mi_showMax" Header="Show Max. Estimates" HorizontalAlignment="Left" Height="20" Width="auto"/>
@@ -30,8 +30,13 @@
             </MenuItem>
             <MenuItem x:Name="mi_help" Header="Help" Height="20" Width="auto"/>
         </Menu>
+
         <Canvas Margin="10,20,10,10">
             <Button x:Name="btnChart" Content="PERT chart" Canvas.Left="260" Canvas.Top="129" Width="75" Click="BtnChart_Click"/>
         </Canvas>
+
+
+        <Frame x:Name="frameMain" Margin="0,20,0,0" NavigationUIVisibility="Hidden"/>
+
     </Grid>
 </Window>

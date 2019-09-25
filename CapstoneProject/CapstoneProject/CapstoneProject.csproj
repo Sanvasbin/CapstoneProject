@@ -70,16 +70,37 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="CalculationService.cs" />
+    <Compile Include="Pages\Chart.xaml.cs">
+      <DependentUpon>Chart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProjectProperties.xaml.cs">
+      <DependentUpon>ProjectProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\frmProjectProperties.xaml.cs">
+      <DependentUpon>frmProjectProperties.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GraphController.cs" />
-    <Compile Include="Node.cs" />
-    <Compile Include="Project.cs" />
-    <Compile Include="Task.cs" />
-    <Compile Include="User.cs" />
-    <Page Include="frmCreateTask.xaml">
+    <Compile Include="Models\Node.cs" />
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\Task.cs" />
+    <Compile Include="Models\User.cs" />
+    <Page Include="Pages\Chart.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="frmPERTChart.xaml">
+    <Page Include="Pages\ProjectProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\frmCreateTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\frmPERTChart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\frmProjectProperties.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -91,10 +112,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="frmCreateTask.xaml.cs">
+    <Compile Include="Windows\frmCreateTask.xaml.cs">
       <DependentUpon>frmCreateTask.xaml</DependentUpon>
     </Compile>
-    <Compile Include="frmPERTChart.xaml.cs">
+    <Compile Include="Windows\frmPERTChart.xaml.cs">
       <DependentUpon>frmPERTChart.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
