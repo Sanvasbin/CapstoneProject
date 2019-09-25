@@ -1,5 +1,5 @@
 USE PertChartDB;
-
+-- written by James Kim
 -- Insert Test Data for User
 INSERT INTO [dbo].[User] (FirstName, LastName, EmailAddress) VALUES ("Merrill","Hammett","tempor.augue.ac@Donecsollicitudin.ca");
 INSERT INTO [dbo].[User] (FirstName, LastName, EmailAddress) VALUES ("Nola","Raja","amet@iaculis.com");
