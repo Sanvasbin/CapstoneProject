@@ -22,10 +22,15 @@ namespace CapstoneProject
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private double dayWidth = 75;
+
         public MainWindow()
         {
             InitializeComponent();
             frameMain.Content = new Chart();
+
+            DrawCalendar(30);
         }
 
         //By Levi Delezene
@@ -58,6 +63,30 @@ namespace CapstoneProject
         {
             //This allows for multiple '.' in the input. Could probably find something nicer
             e.Handled = new Regex("[^0-9.]+").IsMatch(e.Text);
+        }
+
+        // Created by Sandro Pawlidis
+        private void DrawCalendar(int days) {
+            for (int i = 0; i < days; i++) {
+                Line line = new Line();
+                line.Stroke = System.Windows.Media.Brushes.Cyan;
+                line.StrokeThickness = 2;
+
+                line.X1 = i * dayWidth;
+                line.X2 = line.X1;
+
+                line.Y1 = 0;
+                line.Y2 = mainCanvas.Height;
+
+                mainCanvas.Children.Add(line);
+
+                Label lbDay = new Label();
+                lbDay.Content = i + 1;
+
+                Canvas.SetLeft(lbDay, line.X1);
+                mainCanvas.Children.Add(lbDay);
+            }
+
         }
     }
 }
