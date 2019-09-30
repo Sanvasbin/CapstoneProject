@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections;
 
 namespace CapstoneProject.Pages {
     /// <summary>
@@ -28,6 +29,8 @@ namespace CapstoneProject.Pages {
 
         private double dayWidth = 75;
 
+        private Dictionary<string, int> dayMonths = new Dictionary<string, int>(); //Dictionary to add months and their respective days
+
         public Chart() {
             InitializeComponent();
 
@@ -37,7 +40,10 @@ namespace CapstoneProject.Pages {
             this.MouseWheel += ZoomCanvas;
             SetupCanvas();
 
-            DrawCalendar(30);
+            addItemsHashTable();
+            addItemsCombo();
+
+            DrawCalendar(dayMonths[comboBoxMonths.SelectedItem.ToString()]);
 
             mainCanvas.Width = 30 * dayWidth; //TO-DO: Necessary for MouseEvents to fire. Discuss. 
         }
@@ -57,7 +63,7 @@ namespace CapstoneProject.Pages {
                 line.X2 = line.X1;
 
                 line.Y1 = 0;
-                line.Y2 = mainCanvas.Height;
+                line.Y2 = mainCanvas.ActualHeight; //Changed .Height to .ActualHeight to make use of auto width and height - Chase
 
                 mainCanvas.Children.Add(line);
 
@@ -115,5 +121,52 @@ namespace CapstoneProject.Pages {
         private void ReleaseMouseDrag(object sender, RoutedEventArgs e) {
             translating = false;
         }
-    }
+
+        //Added this to handle resizing of the calendar - Chase Torres (9/26/2019)
+        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            mainCanvas.Children.Clear();
+            DrawCalendar(30);
+        }
+
+        //Adds months to the combo box - Chase Torres (9/26/2019)
+        private void addItemsCombo()
+        {
+            foreach(KeyValuePair<string, int> keyEntry in dayMonths)
+            {
+                comboBoxMonths.Items.Add(keyEntry.Key);
+            }
+            comboBoxMonths.SelectedIndex = 0;
+        }
+
+        // Adds the months and days to the dictionary - Chase Torres (9/26/2019)
+        private void addItemsHashTable()
+        {
+            dayMonths.Add("January", 31);
+            dayMonths.Add("February", 28);
+            dayMonths.Add("March", 31);
+            dayMonths.Add("April", 30);
+            dayMonths.Add("May", 31);
+            dayMonths.Add("June", 30);
+            dayMonths.Add("July", 31);
+            dayMonths.Add("August", 31);
+            dayMonths.Add("September", 30);
+            dayMonths.Add("October", 31);
+            dayMonths.Add("November", 30);
+            dayMonths.Add("December", 31);
+        }
+
+        //Redraws the calendar based off the month selected (9/26/2019)
+        private void ComboBoxMonths_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            mainCanvas.Children.Clear();
+            DrawCalendar(dayMonths[comboBoxMonths.SelectedItem.ToString()]);
+        }
+    }   
+
+    // Do we want scrollbar or zoom?
+    //private void addScrollBar()
+    //{
+        
+    //}
 }
