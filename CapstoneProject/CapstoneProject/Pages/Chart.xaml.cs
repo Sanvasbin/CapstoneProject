@@ -34,10 +34,11 @@ namespace CapstoneProject.Pages {
         public Chart() {
             InitializeComponent();
 
-            this.MouseDown += SetMouseDrag;
-            this.MouseMove += DragCanvas;
-            this.MouseUp += ReleaseMouseDrag;
-            this.MouseWheel += ZoomCanvas;
+            //this.MouseDown += SetMouseDrag;
+            //this.MouseMove += DragCanvas;
+            //this.MouseUp += ReleaseMouseDrag;
+            this.PreviewMouseWheel += ZoomCanvas;
+            //this.MouseWheel += ZoomCanvas;
             SetupCanvas();
 
             addItemsHashTable();
@@ -78,6 +79,9 @@ namespace CapstoneProject.Pages {
 
         // Created by Sandro Pawlidis (9/25/2019)
         private void SetupCanvas() {
+            //Set the height so that we have a vertical scrollbar
+            mainCanvas.Height = System.Windows.SystemParameters.PrimaryScreenHeight;
+  
             move = new TranslateTransform();
             zoom = new ScaleTransform();
 
@@ -85,7 +89,7 @@ namespace CapstoneProject.Pages {
             group.Children.Add(move);
             group.Children.Add(zoom);
 
-            mainCanvas.RenderTransform = group;
+            mainCanvas.LayoutTransform = group;
             mainCanvas.RenderTransformOrigin = new Point(0.5, 0.5);
         }
 
@@ -120,6 +124,35 @@ namespace CapstoneProject.Pages {
         // Created by Sandro Pawlidis (9/25/2019)
         private void ReleaseMouseDrag(object sender, RoutedEventArgs e) {
             translating = false;
+        }
+
+        // Created by Chris Neeser (10/1/2019)
+        Point scrollMousePoint = new Point();
+        double hOff = 1;
+        private void scrollViewer_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            scrollMousePoint = e.GetPosition(scrollViewer);
+            hOff = scrollViewer.HorizontalOffset;
+            scrollViewer.CaptureMouse();
+        }
+
+        private void scrollViewer_PreviewMouseMove(object sender, MouseEventArgs e)
+        {
+            if (scrollViewer.IsMouseCaptured)
+            {
+                scrollViewer.ScrollToHorizontalOffset(hOff + (scrollMousePoint.X - e.GetPosition(scrollViewer).X));
+            }
+        }
+
+        private void scrollViewer_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            scrollViewer.ReleaseMouseCapture();
+        }
+
+        private void scrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            e.Handled = true;
+            //scrollViewer.ScrollToHorizontalOffset(scrollViewer.HorizontalOffset + e.Delta);
         }
 
         //Added this to handle resizing of the calendar - Chase Torres (9/26/2019)
