@@ -60,5 +60,11 @@ namespace CapstoneProject
             e.Handled = new Regex("[^0-9.]+").IsMatch(e.Text);
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new frmPERTChart();
+            this.Close();
+            window.ShowDialog();
+        }
     }
 }

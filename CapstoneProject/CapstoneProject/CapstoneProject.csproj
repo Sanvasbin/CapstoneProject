@@ -70,11 +70,19 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="CalculationService.cs" />
+    <Compile Include="DAL\ODependency.cs" />
+    <Compile Include="DAL\OProject.cs" />
+    <Compile Include="DAL\OTask.cs" />
+    <Compile Include="DAL\OUser.cs" />
+    <Compile Include="Models\Dependency.cs" />
     <Compile Include="Pages\Chart.xaml.cs">
       <DependentUpon>Chart.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ProjectProperties.xaml.cs">
       <DependentUpon>ProjectProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\frmDescription.xaml.cs">
+      <DependentUpon>frmDescription.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\frmProjectProperties.xaml.cs">
       <DependentUpon>frmProjectProperties.xaml</DependentUpon>
@@ -93,6 +101,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\frmCreateTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\frmDescription.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -162,6 +174,7 @@
     <Content Include="database\SQL\Status.sql" />
     <Content Include="database\SQL\Task.sql" />
     <Content Include="database\SQL\User.sql" />
+    <Resource Include="Images\arrow.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

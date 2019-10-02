@@ -4,17 +4,28 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\
+=======
+C:\Users\AlankarPokhrel\Documents\2019Fall\cs4488\pertchart2\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\
+>>>>>>> d3f571ddd489367f1193a695b61e33f8385515d2
 CapstoneProject
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\App.xaml
 6-1956658373
 71436059571
 20-262893510
+=======
+C:\Users\AlankarPokhrel\Documents\2019Fall\cs4488\pertchart2\CapstoneProject\CapstoneProject\CapstoneProject\App.xaml
+7213731417
+71436059571
+26-1140634259
+>>>>>>> d3f571ddd489367f1193a695b61e33f8385515d2
 13-1142990016
-Pages\Chart.xaml;Pages\ProjectProperties.xaml;Windows\frmCreateTask.xaml;Windows\frmPERTChart.xaml;Windows\frmProjectProperties.xaml;MainWindow.xaml;
+Pages\Chart.xaml;Pages\ProjectProperties.xaml;Windows\frmCreateTask.xaml;Windows\frmDescription.xaml;Windows\frmPERTChart.xaml;Windows\frmProjectProperties.xaml;MainWindow.xaml;
 
 False
 

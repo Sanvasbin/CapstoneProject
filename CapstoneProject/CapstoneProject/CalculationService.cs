@@ -7,12 +7,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+namespace CapstoneProject.Models
+{
+    class CalculationService
+    {
 
-class CalculationService {
+        DateTime calculatePredictedEndDate(Project project)
+        {
+            throw new NotImplementedException();
+        }
 
-    DateTime calculatePredictedEndDate(Project project) {
-        throw new NotImplementedException();
+        //Other calulation methods
     }
-
-    //Other calulation methods
 }
