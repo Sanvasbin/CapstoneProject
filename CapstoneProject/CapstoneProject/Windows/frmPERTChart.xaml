@@ -8,5 +8,8 @@
         Title="PERT Chart" Height="450" Width="800">
     <Grid Name="grdMain">
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81" Height="33" Click="BtnBack_Click" Margin="0,10,0,0"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+            <Grid Name="grdTasks"></Grid>
+        </ScrollViewer>
     </Grid>
 </Window>

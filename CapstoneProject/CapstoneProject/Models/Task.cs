@@ -8,11 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-enum Status {
+public enum Status {
     notStarted, inProgress, completed
 }
 
-class Task {
+public class Task {
     //These classes are using auto properties. I don't know how they'll work with the database stuff.
     //It's easy enough to change if they won't work
 
