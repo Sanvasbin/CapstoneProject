@@ -1,106 +1,29 @@
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\bin\Debug\database\SmartPertDB.mdf
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\bin\Debug\database\SmartPertDB_log.ldf
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\bin\Debug\CapstoneProject.exe.config
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\bin\Debug\CapstoneProject.exe
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\bin\Debug\CapstoneProject.pdb
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.csprojAssemblyReference.cache
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\Pages\Chart.g.cs
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\Pages\ProjectProperties.g.cs
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmCreateTask.g.cs
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmPERTChart.g.cs
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmProjectProperties.g.cs
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\MainWindow.g.cs
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\App.g.cs
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject_Content.g.cs
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject_MarkupCompile.cache
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject_MarkupCompile.lref
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\Pages\Chart.baml
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\Pages\ProjectProperties.baml
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmCreateTask.baml
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmPERTChart.baml
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmProjectProperties.baml
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\MainWindow.baml
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.g.resources
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.Properties.Resources.resources
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.csproj.GenerateResource.cache
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.csproj.CoreCompileInputs.cache
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.exe
-C:\Users\Chase\Downloads\CapstoneProject-develop\CapstoneProject-develop\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.pdb
-<<<<<<< HEAD
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\bin\Debug\database\SmartPertDB.mdf
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\bin\Debug\database\SmartPertDB_log.ldf
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\bin\Debug\CapstoneProject.exe.config
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\bin\Debug\CapstoneProject.exe
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\bin\Debug\CapstoneProject.pdb
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.csprojAssemblyReference.cache
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\Pages\Chart.g.cs
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\Pages\ProjectProperties.g.cs
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmCreateTask.g.cs
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmPERTChart.g.cs
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmProjectProperties.g.cs
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\MainWindow.g.cs
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\App.g.cs
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject_Content.g.cs
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject_MarkupCompile.cache
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject_MarkupCompile.lref
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\Pages\Chart.baml
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\Pages\ProjectProperties.baml
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmCreateTask.baml
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmPERTChart.baml
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmProjectProperties.baml
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\MainWindow.baml
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.g.resources
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.Properties.Resources.resources
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.csproj.GenerateResource.cache
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.csproj.CoreCompileInputs.cache
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.exe
-C:\Users\ffwnbx\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.pdb
-C:\Users\chris\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.csprojAssemblyReference.cache
-C:\Users\chris\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.exe
-C:\Users\chris\Google Drive\School\Capstone\Project\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.pdb
-=======
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\bin\Debug\database\SmartPertDB.mdf
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\bin\Debug\database\SmartPertDB_log.ldf
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\bin\Debug\CapstoneProject.exe.config
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\bin\Debug\CapstoneProject.exe
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\bin\Debug\CapstoneProject.pdb
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.csprojAssemblyReference.cache
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Pages\Chart.g.cs
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Pages\ProjectProperties.g.cs
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmCreateTask.g.cs
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmPERTChart.g.cs
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmProjectProperties.g.cs
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\MainWindow.g.cs
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\App.g.cs
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject_Content.g.cs
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject_MarkupCompile.cache
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject_MarkupCompile.lref
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Pages\Chart.baml
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Pages\ProjectProperties.baml
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmCreateTask.baml
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmPERTChart.baml
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmProjectProperties.baml
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\MainWindow.baml
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.g.resources
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.Properties.Resources.resources
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.csproj.GenerateResource.cache
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.csproj.CoreCompileInputs.cache
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.exe
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.pdb
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmDescription.g.cs
-F:\CS 4488\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmDescription.baml
-C:\Users\AlankarPokhrel\Documents\2019Fall\cs4488\pertchart2\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.csprojAssemblyReference.cache
-C:\Users\AlankarPokhrel\Documents\2019Fall\cs4488\pertchart2\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Pages\Chart.g.cs
-C:\Users\AlankarPokhrel\Documents\2019Fall\cs4488\pertchart2\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Pages\ProjectProperties.g.cs
-C:\Users\AlankarPokhrel\Documents\2019Fall\cs4488\pertchart2\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmCreateTask.g.cs
-C:\Users\AlankarPokhrel\Documents\2019Fall\cs4488\pertchart2\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmDescription.g.cs
-C:\Users\AlankarPokhrel\Documents\2019Fall\cs4488\pertchart2\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmPERTChart.g.cs
-C:\Users\AlankarPokhrel\Documents\2019Fall\cs4488\pertchart2\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmProjectProperties.g.cs
-C:\Users\AlankarPokhrel\Documents\2019Fall\cs4488\pertchart2\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\MainWindow.g.cs
-C:\Users\AlankarPokhrel\Documents\2019Fall\cs4488\pertchart2\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\App.g.cs
-C:\Users\AlankarPokhrel\Documents\2019Fall\cs4488\pertchart2\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject_Content.g.cs
-C:\Users\AlankarPokhrel\Documents\2019Fall\cs4488\pertchart2\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject_MarkupCompile.cache
-C:\Users\AlankarPokhrel\Documents\2019Fall\cs4488\pertchart2\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject_MarkupCompile.lref
-C:\Users\AlankarPokhrel\Documents\2019Fall\cs4488\pertchart2\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.exe
-C:\Users\AlankarPokhrel\Documents\2019Fall\cs4488\pertchart2\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.pdb
->>>>>>> d3f571ddd489367f1193a695b61e33f8385515d2
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\bin\Debug\database\SmartPertDB.mdf
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\bin\Debug\database\SmartPertDB_log.ldf
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\bin\Debug\CapstoneProject.exe.config
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\bin\Debug\CapstoneProject.exe
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\bin\Debug\CapstoneProject.pdb
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Pages\Chart.g.cs
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Pages\ProjectProperties.g.cs
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmCreateTask.g.cs
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmDescription.g.cs
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmPERTChart.g.cs
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmProjectProperties.g.cs
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\MainWindow.g.cs
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\App.g.cs
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject_Content.g.cs
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject_MarkupCompile.cache
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject_MarkupCompile.lref
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Pages\Chart.baml
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Pages\ProjectProperties.baml
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmCreateTask.baml
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmDescription.baml
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmPERTChart.baml
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\Windows\frmProjectProperties.baml
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\MainWindow.baml
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.g.resources
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.Properties.Resources.resources
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.csproj.GenerateResource.cache
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.csproj.CoreCompileInputs.cache
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.exe
+E:\School\fall 2019\Capstone\project\CapstoneProject\CapstoneProject\CapstoneProject\obj\Debug\CapstoneProject.pdb
