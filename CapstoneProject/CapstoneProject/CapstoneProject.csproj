@@ -70,6 +70,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="CalculationService.cs" />
+    <Compile Include="DAL\ODependency.cs" />
+    <Compile Include="DAL\OProject.cs" />
+    <Compile Include="DAL\OTask.cs" />
+    <Compile Include="DAL\OUser.cs" />
+    <Compile Include="Models\Dependency.cs" />
     <Compile Include="Pages\Chart.xaml.cs">
       <DependentUpon>Chart.xaml</DependentUpon>
     </Compile>
