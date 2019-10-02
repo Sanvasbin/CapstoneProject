@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using CapstoneProject.Models;
 
+using CapstoneProject.Models;
+
 namespace CapstoneProject
 {
     /// <summary>

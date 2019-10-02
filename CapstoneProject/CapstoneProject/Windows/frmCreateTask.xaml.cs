@@ -13,6 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using CapstoneProject.Models;
+using CapstoneProject.DAL;
+
 namespace CapstoneProject
 {
     /// <summary>
@@ -51,6 +54,9 @@ namespace CapstoneProject
                     task.Status = Status.completed;
                     break;
             }
+
+            //new OTask().Insert(task); //Having problems connecting to db
+
             return task;
         }
 
