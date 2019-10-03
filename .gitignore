@@ -261,3 +261,6 @@ __pycache__/
 *.pyc
 /CapstoneProject/CapstoneProject/obj
 obj
+obj
+bin
+bin
