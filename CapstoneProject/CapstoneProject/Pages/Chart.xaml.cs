@@ -13,13 +13,15 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections;
 
-namespace CapstoneProject.Pages {
+namespace CapstoneProject.Pages
+{
     /// <summary>
     /// Interaction logic for Chart.xaml
     /// </summary>
-    
+
     //By Levi Delezene
-    public partial class Chart : Page {
+    public partial class Chart : Page
+    {
 
         private Point savedMousePosition;
         private TranslateTransform move;
@@ -30,7 +32,8 @@ namespace CapstoneProject.Pages {
 
         private Dictionary<string, int> dayMonths = new Dictionary<string, int>(); //Dictionary to add months and their respective days
 
-        public Chart() {
+        public Chart()
+        {
             InitializeComponent();
 
             //this.MouseDown += SetMouseDrag;
@@ -43,18 +46,21 @@ namespace CapstoneProject.Pages {
             addItemsHashTable();
             addItemsCombo();
 
-            DrawCalendar(dayMonths[comboBoxMonths.SelectedItem.ToString()]);
-
-            mainCanvas.Width = 30 * dayWidth; //TO-DO: Necessary for MouseEvents to fire. Discuss. 
+            DrawCalendar(365);
         }
 
-        private void mi_addTask_Click(object sender, RoutedEventArgs e) {
+        private void mi_addTask_Click(object sender, RoutedEventArgs e)
+        {
             new frmCreateTask().Show();
         }
 
         // Created by Sandro Pawlidis (9/25/2019)
-        private void DrawCalendar(int days) {
-            for (int i = 0; i < days; i++) {
+        private void DrawCalendar(int days)
+        {
+            int lblCurrentDay = 1;
+            int dicIndex = 0;
+            for (int i = 0; i < days; i++)
+            {
                 Line line = new Line();
                 line.Stroke = System.Windows.Media.Brushes.Cyan;
                 line.StrokeThickness = 2;
@@ -68,7 +74,14 @@ namespace CapstoneProject.Pages {
                 mainCanvas.Children.Add(line);
 
                 Label lbDay = new Label();
-                lbDay.Content = i + 1;
+                if (lblCurrentDay > dayMonths.Values.ElementAt(dicIndex))
+                {
+                    lblCurrentDay = 1;
+                    dicIndex++;
+                }
+                lbDay.Content = lblCurrentDay;
+
+                lblCurrentDay++;
 
                 Canvas.SetLeft(lbDay, line.X1);
                 mainCanvas.Children.Add(lbDay);
@@ -77,10 +90,12 @@ namespace CapstoneProject.Pages {
         }
 
         // Created by Sandro Pawlidis (9/25/2019)
-        private void SetupCanvas() {
+        private void SetupCanvas()
+        {
             //Set the height so that we have a vertical scrollbar
             mainCanvas.Height = System.Windows.SystemParameters.PrimaryScreenHeight;
-  
+            mainCanvas.Width = 365 * dayWidth; //TO-DO: Necessary for MouseEvents to fire. Discuss. 
+
             move = new TranslateTransform();
             zoom = new ScaleTransform();
 
@@ -93,20 +108,25 @@ namespace CapstoneProject.Pages {
         }
 
         // Created by Sandro Pawlidis (9/25/2019)
-        private void ZoomCanvas(object sender, MouseWheelEventArgs e) {
+        private void ZoomCanvas(object sender, MouseWheelEventArgs e)
+        {
             double zoomSpeed = 0.05;
 
-            if (e.Delta > 0) {
+            if (e.Delta > 0)
+            {
                 zoom.ScaleX += zoomSpeed;
                 zoom.ScaleY += zoomSpeed;
-            } else if (e.Delta < 0) {
+            }
+            else if (e.Delta < 0)
+            {
                 zoom.ScaleX -= zoomSpeed;
                 zoom.ScaleY -= zoomSpeed;
             }
         }
 
         // Created by Sandro Pawlidis (9/25/2019)
-        private void DragCanvas(object sender, RoutedEventArgs e) {
+        private void DragCanvas(object sender, RoutedEventArgs e)
+        {
             if (!translating) return;
 
             Point currentMousePos = Mouse.GetPosition(mainCanvas);
@@ -115,13 +135,15 @@ namespace CapstoneProject.Pages {
         }
 
         // Created by Sandro Pawlidis (9/25/2019)
-        private void SetMouseDrag(object sender, RoutedEventArgs e) {
+        private void SetMouseDrag(object sender, RoutedEventArgs e)
+        {
             translating = true;
             savedMousePosition = Mouse.GetPosition(mainCanvas);
         }
 
         // Created by Sandro Pawlidis (9/25/2019)
-        private void ReleaseMouseDrag(object sender, RoutedEventArgs e) {
+        private void ReleaseMouseDrag(object sender, RoutedEventArgs e)
+        {
             translating = false;
         }
 
@@ -158,13 +180,13 @@ namespace CapstoneProject.Pages {
         private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             mainCanvas.Children.Clear();
-            DrawCalendar(30);
+            DrawCalendar(365);
         }
 
         //Adds months to the combo box - Chase Torres (9/26/2019)
         private void addItemsCombo()
         {
-            foreach(KeyValuePair<string, int> keyEntry in dayMonths)
+            foreach (KeyValuePair<string, int> keyEntry in dayMonths)
             {
                 comboBoxMonths.Items.Add(keyEntry.Key);
             }
@@ -188,17 +210,25 @@ namespace CapstoneProject.Pages {
             dayMonths.Add("December", 31);
         }
 
-        //Redraws the calendar based off the month selected (9/26/2019)
+        //Redraws the calendar based off the month selected - Chase Torres(9/26/2019)
+        //Modified this to move the scrollbar to the start of the selected month. - Chase Torres(10/7/2019)
         private void ComboBoxMonths_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            mainCanvas.Children.Clear();
-            DrawCalendar(dayMonths[comboBoxMonths.SelectedItem.ToString()]);
+            double monthPosition = 0;
+            double totalDays = 0;
+            for (int i = 0; i < dayMonths.Keys.ToList().IndexOf((string)comboBoxMonths.SelectedItem); i++)
+            {
+                totalDays += dayMonths.Values.ElementAt(i);
+            }
+            monthPosition = totalDays * dayWidth;
+            scrollViewer.ScrollToHorizontalOffset(monthPosition);
         }
-    }   
 
-    // Do we want scrollbar or zoom?
-    //private void addScrollBar()
-    //{
-        
-    //}
+        //Going to try to use a groupbox as the container to add tasks to the canvas
+        private void addGroupBoxCanvas()
+        {
+            GroupBox taskGroup = new GroupBox();
+            
+        }
+    }
 }
