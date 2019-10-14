@@ -20,6 +20,12 @@ namespace CapstoneProject.Models
         //These classes are using auto properties. I don't know how they'll work with the database stuff.
         //It's easy enough to change if they won't work
 
+        public Task()
+        {
+            CompletedDate = null;
+            StartedDate = null;
+        }
+
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
@@ -27,8 +33,8 @@ namespace CapstoneProject.Models
         public float MaxDuration { get; set; }
         public float MostLikelyDuration { get; set; }
         public int Priority { get; set; }
-        public DateTime CompletedDate { get; set; }
-        public DateTime StartedDate { get; set; }
+        public Nullable<DateTime> CompletedDate { get; set; }
+        public Nullable<DateTime> StartedDate { get; set; }
         public DateTime DeletedDate { get; set; }
 
         //modified date created by alankar pokhrel

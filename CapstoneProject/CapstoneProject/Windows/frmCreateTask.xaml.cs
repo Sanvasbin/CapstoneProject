@@ -15,6 +15,9 @@ using System.Windows.Shapes;
 
 using CapstoneProject.Models;
 using CapstoneProject.DAL;
+using CapstoneProject.Pages;
+using System.Globalization;
+using System.Data.SqlClient;
 
 namespace CapstoneProject
 {
@@ -25,21 +28,25 @@ namespace CapstoneProject
     //By Levi Delezene
     public partial class frmCreateTask : Window
     {
-        public frmCreateTask()
+        private Chart _chart;
+        public frmCreateTask(Chart chart)
         {
             InitializeComponent();
             Owner = Application.Current.MainWindow;
+            _chart = chart;
         }
 
         //By Levi Delezene
         private Task createTask() {
             Task task = new Task {
                 Name = tbxTaskName.Text,
+                Project = _chart.Project,
                 Description = tbxTaskDescription.Text,
                 MinDuration = float.Parse(tbxMinDuration.Text),
                 MaxDuration = float.Parse(tbxMaxDuration.Text),
                 Priority = int.Parse(cmbPriority.Text),
-                Owner = new User() { FirstName = "first", MiddleName = "middle", LastName = "last" } //TODO: implement users
+                StartedDate = DateTime.Parse("1/5/2019"),
+                Owner = (User)cmbOwner.Items[cmbOwner.SelectedIndex]
             };
 
             //Maybe find a better way to do this
@@ -55,15 +62,17 @@ namespace CapstoneProject
                     break;
             }
 
-            //new OTask().Insert(task); //Having problems connecting to db
-
+            new OTask().Insert(task); //Having problems connecting to db
+            
             return task;
         }
 
         //By Levi Delezene
         private void btnSubmitAndClose_Click(object sender, RoutedEventArgs e) {
             try {
-                createTask();
+                Task task = createTask();
+                _chart.Newtask = task;
+                
             } catch (Exception excep) {
                 MessageBox.Show(excep.ToString());
             } finally {
@@ -80,13 +89,25 @@ namespace CapstoneProject
             } finally {
                 //There's probably a better way to do this
                 Close();
-                new frmCreateTask().Show();
+                new frmCreateTask(_chart).Show();
             }
         }
 
         //By Levi Delezene
         private void numberValidation(object sender, TextCompositionEventArgs e) {
             MainWindow.numberValidation(sender, e);
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            tbxTaskName.Focus();
+            OUser user = new OUser();
+            SqlDataReader sdr = user.Select();
+            while(sdr.Read())
+            {
+                User userValue = new User(sdr.GetInt32(0), sdr.GetString(1), sdr.GetString(2));
+                cmbOwner.Items.Add(userValue);
+            }
         }
     }
 }

@@ -20,6 +20,8 @@ namespace CapstoneProject.Pages {
     
     //By Levi Delezene
     public partial class ProjectProperties : Page {
+        Project project;
+
         public ProjectProperties() {
             InitializeComponent();
             dpStartDate.BlackoutDates.AddDatesInPast();
@@ -31,11 +33,11 @@ namespace CapstoneProject.Pages {
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e) {
             try {
-                createProject();
+                project = createProject();
             } catch (Exception excep) {
                 MessageBox.Show(excep.ToString());
             } finally {
-                NavigationService.Navigate(new Chart());
+                NavigationService.Navigate(new Chart(project));
             }
         }
 

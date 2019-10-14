@@ -1,4 +1,5 @@
-﻿using CapstoneProject.Pages;
+﻿using CapstoneProject.Models;
+using CapstoneProject.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,10 +23,18 @@ namespace CapstoneProject
     /// </summary>
     public partial class MainWindow : Window
     {
+        Project project;
+        Chart chart;
+
         public MainWindow()
         {
             InitializeComponent();
-            frameMain.Content = new Chart();
+            project = new Project();
+            chart = new Chart(project);
+
+            project.StartDate = new DateTime(2019, 1, 1);
+            project.Id = 1;
+            frameMain.Content = chart;
         }
 
         //By Levi Delezene
@@ -50,7 +59,7 @@ namespace CapstoneProject
         //By Levi Delezene
         private void mi_openProject_Click(object sender, RoutedEventArgs e)
         {
-            frameMain.Content = new Chart();
+            frameMain.Content = new Chart(project);
         }
 
         //By Levi Delezene

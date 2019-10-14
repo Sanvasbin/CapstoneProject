@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections;
+using CapstoneProject.Models;
 
 namespace CapstoneProject.Pages {
     /// <summary>
@@ -25,19 +26,18 @@ namespace CapstoneProject.Pages {
         private TranslateTransform move;
         private ScaleTransform zoom;
         private bool translating = false;
+        private Project _project;
+        private Task newtask;
 
-        private double dayWidth = 75;
+        private double dayWidth = Properties.Settings.Default.dayWidth;
 
         private Dictionary<string, int> dayMonths = new Dictionary<string, int>(); //Dictionary to add months and their respective days
 
-        public Chart() {
+        public Chart(Project project) {
             InitializeComponent();
 
-            //this.MouseDown += SetMouseDrag;
-            //this.MouseMove += DragCanvas;
-            //this.MouseUp += ReleaseMouseDrag;
+            Project = project;
             this.PreviewMouseWheel += ZoomCanvas;
-            //this.MouseWheel += ZoomCanvas;
             SetupCanvas();
 
             addItemsHashTable();
@@ -48,8 +48,24 @@ namespace CapstoneProject.Pages {
             mainCanvas.Width = 30 * dayWidth; //TO-DO: Necessary for MouseEvents to fire. Discuss. 
         }
 
+        public Task Newtask
+        {
+            get
+            {
+                return newtask;
+            }
+
+            set
+            {
+                newtask = value;
+            }
+        }
+
+        public Project Project { get => _project; set => _project = value; }
+
         private void mi_addTask_Click(object sender, RoutedEventArgs e) {
-            new frmCreateTask().Show();
+            new frmCreateTask(this).ShowDialog();
+            AddTask(Newtask);
         }
 
         // Created by Sandro Pawlidis (9/25/2019)
@@ -74,6 +90,29 @@ namespace CapstoneProject.Pages {
                 mainCanvas.Children.Add(lbDay);
             }
 
+        }
+
+        public void AddTask(Task task)
+        {
+          
+            CalculationService cs = new CalculationService();
+            Rect rectVal = cs.dateToChartCoordinate(Project.StartDate,task.StartedDate, task.MaxDuration);
+            Grid taskGrid = new Grid();
+            Rectangle taskRect = new Rectangle();
+            TextBlock taskTextBlock = new TextBlock();
+            taskTextBlock.Text = task.Name;
+
+            taskRect.Width = rectVal.Width;
+            taskRect.Height = 50;
+            taskRect.StrokeThickness = 2;
+            taskRect.Stroke = new SolidColorBrush(Colors.Red);
+
+            taskGrid.Children.Add(taskRect);
+            taskGrid.Children.Add(taskTextBlock);
+
+            Canvas.SetTop(taskGrid, 30);
+            Canvas.SetLeft(taskGrid, rectVal.X);
+            mainCanvas.Children.Add(taskGrid);
         }
 
         // Created by Sandro Pawlidis (9/25/2019)
@@ -128,6 +167,7 @@ namespace CapstoneProject.Pages {
         // Created by Chris Neeser (10/1/2019)
         Point scrollMousePoint = new Point();
         double hOff = 1;
+
         private void scrollViewer_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             scrollMousePoint = e.GetPosition(scrollViewer);

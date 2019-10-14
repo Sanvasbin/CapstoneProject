@@ -14,7 +14,7 @@ namespace CapstoneProject.DAL
 {
     public class OUser
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=\pertchart\CapstoneProject\CapstoneProject\CapstoneProject\database\SmartPertDB.mdf;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\database\SmartPertDB.mdf;Integrated Security=True");
 
         public int Insert(User newUser)
         {
@@ -56,7 +56,7 @@ namespace CapstoneProject.DAL
         public SqlDataReader Select()
         {
             conn.Open();
-            string query = "Select * from User";
+            string query = "Select UserId, FirstName, LastName, EmailAddress from \"User\"";
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataReader reader = cmd.ExecuteReader();
             return reader;

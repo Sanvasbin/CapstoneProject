@@ -6,26 +6,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CapstoneProject"
         mc:Ignorable="d"
-        Title="Create Task" Height="400" Width="265">
+        Title="Create Task" Height="400" Width="265" Loaded="Window_Loaded">
     <Grid Margin="0,0,2,0">
         <Label x:Name="lblTaskName" Content="Task Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbxTaskName" HorizontalAlignment="Left" Height="23" Margin="113,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
+        <Label x:Name="lblTaskDescription" Content="Task Description:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxTaskDescription" HorizontalAlignment="Left" Height="87" Margin="113,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        
         <Label x:Name="lblMinDuration" Content="Min Duration:" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbxMinDuration" PreviewTextInput="numberValidation" HorizontalAlignment="Left" Height="23" Margin="113,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
         <Label x:Name="lblMaxDuration" Content="Max Duration:" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbxMaxDuration" PreviewTextInput="numberValidation" HorizontalAlignment="Left" Height="23" Margin="113,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-
-        <Label x:Name="lblTaskDescription" Content="Task Description:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxTaskDescription" HorizontalAlignment="Left" Height="87" Margin="113,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-
-        <Label x:Name="lblOwner" Content="Owner:" HorizontalAlignment="Left" Margin="10,212,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cmbOwner" HorizontalAlignment="Left" Margin="113,216,0,0" VerticalAlignment="Top" Width="120">
-
-        </ComboBox>
-
         <Label x:Name="lblPriorityLevel" Content="Priority Level:" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top"/>
+        
         <ComboBox x:Name="cmbPriority" HorizontalAlignment="Left" Margin="113,189,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem>1</ComboBoxItem>
             <ComboBoxItem>2</ComboBoxItem>
@@ -33,6 +28,12 @@
             <ComboBoxItem>4</ComboBoxItem>
             <ComboBoxItem>5</ComboBoxItem>
         </ComboBox>
+
+        <Label x:Name="lblOwner" Content="Owner:" HorizontalAlignment="Left" Margin="10,212,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cmbOwner" HorizontalAlignment="Left" Margin="113,216,0,0" VerticalAlignment="Top" Width="120">
+
+        </ComboBox>
+
         <Label x:Name="lblStatus" Content="Status:" HorizontalAlignment="Left" Margin="10,239,0,0" VerticalAlignment="Top"/>
 
         <ComboBox x:Name="cmbStatus" HorizontalAlignment="Left" Margin="113,243,0,0" VerticalAlignment="Top" Width="120">

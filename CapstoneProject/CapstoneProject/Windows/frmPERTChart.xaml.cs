@@ -29,8 +29,8 @@ namespace CapstoneProject
         Task[] tasks;
         string[] taskNames;
         string[] taskDescription;
-        DateTime[] taskStartDate;
-        DateTime[] taskEndDate;
+        Nullable<DateTime>[] taskStartDate;
+        Nullable<DateTime>[] taskEndDate;
         string[] priorityLevel;
         string[] mostLikely;
         
@@ -48,8 +48,8 @@ namespace CapstoneProject
         {
             taskNames = new string[10];
             taskDescription = new string[10];
-            taskStartDate = new DateTime[10];
-            taskEndDate = new DateTime[10];
+            taskStartDate = new Nullable<DateTime>[10];
+            taskEndDate = new Nullable<DateTime>[10];
             priorityLevel = new string[10];
             mostLikely = new string[10];
             tasks = new Task[10];
@@ -88,8 +88,8 @@ namespace CapstoneProject
         // ways to load database and store the whole value in an array for each variable
         // ToDo: make priority level a enum
         // By sabin
-        private void DisplayChart(string[] taskNames, string[] taskDescriptions, DateTime[] taskStartDate,
-            DateTime[] taskCompleteDate, string[] priorityLevel, string[] mostLikely)
+        private void DisplayChart(string[] taskNames, string[] taskDescriptions, Nullable<DateTime>[] taskStartDate,
+            Nullable<DateTime>[] taskCompleteDate, string[] priorityLevel, string[] mostLikely)
         {
             grdTasks.Height = 100;
             grdTasks.RowDefinitions.Add(new RowDefinition());

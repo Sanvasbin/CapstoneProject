@@ -11,13 +11,33 @@ namespace CapstoneProject.DAL
 {
     public class OTask
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=\pertchart\CapstoneProject\CapstoneProject\CapstoneProject\database\SmartPertDB.mdf;Integrated Security=True");
+        //SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\database\SmartPertDB.mdf;Initial Catalog=dbo;Integrated Security=True");
+
+        SqlConnection conn;
+
+    
+        public OTask()
+        {
+            conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\database\SmartPertDB.mdf;Integrated Security=True");
+        }
+
 
         public int Insert(Task newTask)
         {
             conn.Open();
-            string query = "insert into Task(Name, Description, MinEstDuration, MaxEstDuration, MostLikelyeEstDuration, StartDate, EndDate, ModifiedDate, StatusId, UserId, ProjectId) values('" + newTask.Name + "', '" + newTask.Description + "', '" + newTask.MinDuration+ "', '" + newTask.MaxDuration + "', '" + newTask.MostLikelyDuration + "', '" + newTask.StartedDate + "', '" + newTask.CompletedDate + "', '" + newTask.ModifiedDate + "', '" + newTask.Status + "', '" + newTask.Owner.Id + "', '" + newTask.Project.Id + "')'";
+            string query = "insert into Task(Name, Description, MinEstDuration, MaxEstDuration, MostLikelyeEstDuration, StartDate, EndDate, ModifiedDate, StatusId, UserId, ProjectId) values(@name, @description, @minduration, @maxduration, @mostlikelyduration, @starteddate, @completeddate, @modifieddate, @status, @ownerid, @projectid)";
             SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@name",newTask.Name);
+            cmd.Parameters.AddWithValue("@description",newTask.Description);
+            cmd.Parameters.AddWithValue("@minduration",newTask.MinDuration);
+            cmd.Parameters.AddWithValue("@maxduration",newTask.MaxDuration);
+            cmd.Parameters.AddWithValue("@mostlikelyduration",newTask.MostLikelyDuration);
+            cmd.Parameters.AddWithValue("@starteddate",((object)newTask.StartedDate) ?? DBNull.Value);
+            cmd.Parameters.AddWithValue("@completeddate",((object)newTask.CompletedDate) ?? DBNull.Value);
+            cmd.Parameters.AddWithValue("@modifieddate",DateTime.Now);
+            cmd.Parameters.AddWithValue("@status",newTask.Status);
+            cmd.Parameters.AddWithValue("@ownerid",newTask.Owner.Id);
+            cmd.Parameters.AddWithValue("@projectid",newTask.Project.Id);
             int effectedIds = cmd.ExecuteNonQuery();
             conn.Close();
             return effectedIds;

@@ -12,6 +12,18 @@ namespace CapstoneProject.Models
 {
     public class User
     {
+        public User(int id, string FirstName, String LastName)
+        {
+            this.Id = id;
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+        }
+
+        public User()
+        {
+
+        }
+
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
@@ -32,6 +44,11 @@ namespace CapstoneProject.Models
         public string FullName
         {
             get { return $"{FirstName} {MiddleName} {LastName}"; }
+        }
+
+        public override string ToString()
+        {
+            return FullNameNoMiddle;
         }
     }
 }
