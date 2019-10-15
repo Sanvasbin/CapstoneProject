@@ -65,7 +65,8 @@ namespace CapstoneProject.Pages
 
         private void mi_addTask_Click(object sender, RoutedEventArgs e)
         {
-            new frmCreateTask().Show();
+            new frmCreateTask(this).ShowDialog();
+            AddTask(newtask);
         }
 
         // Created by Sandro Pawlidis (9/25/2019)

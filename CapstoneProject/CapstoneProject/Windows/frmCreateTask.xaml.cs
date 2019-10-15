@@ -12,8 +12,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
-using CapstoneProject.Models;
 using CapstoneProject.DAL;
 using CapstoneProject.Pages;
 using System.Globalization;
@@ -62,7 +60,7 @@ namespace CapstoneProject
                     break;
             }
 
-            new OTask().Insert(task); //Having problems connecting to db
+            new OTask().Insert(task);
             
             return task;
         }
