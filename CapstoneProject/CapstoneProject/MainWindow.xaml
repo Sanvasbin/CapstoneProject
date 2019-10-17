@@ -10,7 +10,7 @@
     <Grid>
         <Menu HorizontalAlignment="Stretch" Height="20" VerticalAlignment="Top" Margin="0">
             <MenuItem Header="File" Height="20" Width="auto">
-                <MenuItem x:Name="mi_newProject" Header="New Project" Height="20" HorizontalAlignment="Left" Width="auto"/>
+                <MenuItem x:Name="mi_newProject" Header="New Project" Height="20" HorizontalAlignment="Left" Width="auto"  Click="Mi_newProject_Click"/>
                 <MenuItem x:Name="mi_openProject" Header="Open Project" HorizontalAlignment="Left" Height="20" Width="auto" Click="mi_openProject_Click"/>
                 <MenuItem x:Name="mi_saveProject" Header="Save Project" HorizontalAlignment="Left" Height="20" Width="auto"/>
                 <Separator/>

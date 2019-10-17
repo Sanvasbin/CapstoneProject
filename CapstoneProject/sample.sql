@@ -1,0 +1,6 @@
+﻿CREATE PROCEDURE sprocUsersGetAll
+AS 
+BEGIN
+	SET NOCOUNT ON
+	SELECT * FROM Users
+END
