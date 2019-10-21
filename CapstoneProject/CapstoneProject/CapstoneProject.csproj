@@ -78,14 +78,20 @@
     <Compile Include="Pages\Chart.xaml.cs">
       <DependentUpon>Chart.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ProjectProperties.xaml.cs">
+    <Compile Include="Pages\Project\CreateProject.xaml.cs">
+      <DependentUpon>CreateProject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Project\ProjectProperties.xaml.cs">
       <DependentUpon>ProjectProperties.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\frmDescription.xaml.cs">
       <DependentUpon>frmDescription.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\frmProjectProperties.xaml.cs">
-      <DependentUpon>frmProjectProperties.xaml</DependentUpon>
+    <Compile Include="Windows\frmProject.xaml.cs">
+      <DependentUpon>frmProject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\frmProjectDashboard.xaml.cs">
+      <DependentUpon>frmProjectDashboard.xaml</DependentUpon>
     </Compile>
     <Compile Include="GraphController.cs" />
     <Compile Include="Models\Node.cs" />
@@ -96,7 +102,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ProjectProperties.xaml">
+    <Page Include="Pages\Project\CreateProject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Project\ProjectProperties.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -112,7 +122,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\frmProjectProperties.xaml">
+    <Page Include="Windows\frmProject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\frmProjectDashboard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -182,6 +196,10 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\Task\" />
+    <Folder Include="Pages\User\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

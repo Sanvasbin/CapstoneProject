@@ -93,7 +93,7 @@ namespace CapstoneProject
 
         //By Levi Delezene
         private void numberValidation(object sender, TextCompositionEventArgs e) {
-            MainWindow.numberValidation(sender, e);
+            //MainWindow.numberValidation(sender, e);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
