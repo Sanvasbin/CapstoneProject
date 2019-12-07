@@ -28,7 +28,7 @@ namespace newPertChart {
             try {
                 // Setting connection string               
                 connection.ConnectionString = GetDatabasePath();
-
+                
                 // Creating sql commnad to run on the database
                 SqlCommand comm = new SqlCommand();
                 comm.CommandText = "SELECT * FROM Project";
@@ -100,34 +100,5 @@ namespace newPertChart {
 
         }
 
-        public static void Insert(Project newProject) {
-
-            SqlConnection conn = new SqlConnection();
-            try {
-                // Setting connection string               
-                conn.ConnectionString = GetDatabasePath();
-
-                // Creating sql commnad to run on the database
-                SqlCommand comm = new SqlCommand();
-
-                newProject.StartDate = DateTime.Now;
-                comm.CommandText = $"Insert INTO Project VALUES ('{newProject.Name}', {newProject.StartDate}, {newProject.WorkingHours}, {1}, '{newProject.Description}')";
-
-                //--INSERT INTO Project([Name], [Description], StartDate, WorkingHours, ProjectOwner )
-                //--VALUES('Pert Chart', 'Testing is for testing Description', 2019 - 10 - 10, 100, 1);
-                comm.Connection = conn; // Sets the connection to the command
-                // open connection
-                conn.Open();
-
-                comm.ExecuteNonQuery();
-            } catch (Exception ex) {
-                System.Diagnostics.Debug.WriteLine(ex.Message);
-
-            } finally {
-                // close the connection
-                conn.Close();
-            }
-
-        }
-        }
+    }
 }
