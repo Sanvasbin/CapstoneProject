@@ -31,7 +31,20 @@
         <Label Content="Working Hours: " HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"/>
         <TextBox x:Name="tbxWorkingHours" HorizontalAlignment="Left" Height="23" Margin="105,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1" Grid.Column="1"/>
 
-        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="105,209,0,0" VerticalAlignment="Top" Width="120" Grid.Row="1" Grid.Column="1"/>
+        <ComboBox x:Name="cbUser" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="1.24,8.612" Margin="96,200.4,0,0" SelectionChanged="CbUser_SelectionChanged">
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-4.686"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-15.812"/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
+        </ComboBox>
+
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="54,49,0,0" VerticalAlignment="Top" Width="120" Grid.Row="2" Grid.Column="1" Click="BtnSubmit_Click"/>
         <Button Content="Back" Name ="btnBack" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="BtnBack_Click"/>
+        <Label Content="User:" HorizontalAlignment="Left" Margin="10,196.4,0,0" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"/>
+
     </Grid>
 </Page>

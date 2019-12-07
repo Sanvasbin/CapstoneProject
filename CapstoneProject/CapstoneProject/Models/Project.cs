@@ -19,7 +19,7 @@ namespace CapstoneProject.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime StartDate { get; set; }
-        public float WorkingHours { get; set; }
+        public double WorkingHours { get; set; }
 
 
         //Project owner created by alankar Pokhrel

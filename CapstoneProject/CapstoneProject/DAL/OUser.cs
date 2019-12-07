@@ -53,13 +53,42 @@ namespace CapstoneProject.DAL
             return effectedIds;
 
         }
-        public SqlDataReader Select()
+
+        public List<User> Select()
         {
             conn.Open();
             string query = "Select UserId, FirstName, LastName, EmailAddress from \"User\"";
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataReader reader = cmd.ExecuteReader();
-            return reader;
+            List<User> userList = new List<User>();
+            while (reader.Read())
+            {
+                User user = new User();
+                user.Id = (int)reader["UserId"];
+                user.FirstName = (string)reader["FirstName"];
+                user.LastName = (string)reader["LastName"];
+                userList.Add(user);
+            }
+            conn.Close();
+            return userList;
         }
+
+        public User getByID(int userId)
+        {
+            conn.Open();
+            string query = "Select UserId, FirstName, LastName, EmailAddress from \"User\" where userid=@userid";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@userid", userId);
+            SqlDataReader reader = cmd.ExecuteReader();
+            User user = new User();
+            while (reader.Read())
+            {
+                user = new User((int)reader["UserId"], (string)reader["FirstName"], (string)reader["LastName"]);
+            }
+            conn.Close();
+            return user;
+        }
+
+
     }
 }

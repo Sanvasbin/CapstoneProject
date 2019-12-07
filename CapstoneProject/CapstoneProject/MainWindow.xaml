@@ -14,12 +14,15 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="95*"/>
+            <RowDefinition Height="Auto" MinHeight="292.8"/>
+            <RowDefinition Height="32*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnNewProject" Content="New Project" HorizontalAlignment="Left" Margin="10.4,0,0,0" VerticalAlignment="Top" Width="196" Height="92" Grid.Row="1" Grid.Column="1" Click="BtnNewProject_Click" />
-        <Button x:Name="btnOpenProject" Content="Open Project" HorizontalAlignment="Left" Margin="10.4,180,0,0" VerticalAlignment="Top" Width="196" Height="92" Grid.Row="1" Grid.Column="1" Click="BtnOpenProject_Click"/>
+        <Button x:Name="btnNewProject" Content="New Project" HorizontalAlignment="Left" Margin="107.8,178.8,0,0" VerticalAlignment="Top" Width="116" Height="62" Grid.Row="1" Grid.Column="1" Click="BtnNewProject_Click" />
+        <Button x:Name="btnOpenProject" Content="Open Project" HorizontalAlignment="Left" Margin="107.8,82.8,0,0" VerticalAlignment="Top" Width="116" Height="57" Grid.Row="1" Grid.Column="1" Click="BtnOpenProject_Click"/>
+        <ComboBox x:Name="cbProject" HorizontalAlignment="Left" Margin="179,26.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="160" Grid.Column="1" Height="22"/>
+        <Label x:Name="lblTitle" Content="Please select a project to open" Grid.Column="1" HorizontalAlignment="Left" Margin="3,22.8,0,0" Grid.Row="1" VerticalAlignment="Top" Height="25" Width="171"/>
+        <Label Content="Welcome back to Project Management App" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="49,10,0,0" Grid.ColumnSpan="3" Height="46" Width="682" FontFamily="Bookman Old Style" FontSize="30" FontWeight="Bold"/>
 
     </Grid>
 </Window>

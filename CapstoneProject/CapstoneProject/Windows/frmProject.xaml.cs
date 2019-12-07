@@ -32,7 +32,6 @@ namespace CapstoneProject.Windows
                 CreateProject cpj = new CreateProject();
                 this.Content = cpj;
                 this.Title = "Create Project"; 
-                
             }
         }
     }

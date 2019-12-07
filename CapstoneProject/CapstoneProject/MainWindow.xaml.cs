@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CapstoneProject.DAL;
 
 namespace CapstoneProject
 {
@@ -28,6 +29,12 @@ namespace CapstoneProject
         public MainWindow()
         {
             InitializeComponent();
+            OProject oProject = new OProject();
+            List<Project> projects = oProject.Select();
+            foreach (Project pj in projects)
+            {
+                cbProject.Items.Add(pj.Name);
+            }
         }
 
         // Sabin Shrestha

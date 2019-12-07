@@ -100,12 +100,12 @@ namespace CapstoneProject
         {
             tbxTaskName.Focus();
             OUser user = new OUser();
-            SqlDataReader sdr = user.Select();
-            while(sdr.Read())
-            {
-                User userValue = new User(sdr.GetInt32(0), sdr.GetString(1), sdr.GetString(2));
-                cmbOwner.Items.Add(userValue);
-            }
+            //SqlDataReader sdr = user.Select();
+            //while(sdr.Read())
+            //{
+            //    User userValue = new User(sdr.GetInt32(0), sdr.GetString(1), sdr.GetString(2));
+            //    cmbOwner.Items.Add(userValue);
+            //}
         }
     }
 }
